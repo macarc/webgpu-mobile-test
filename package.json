@@ -1,0 +1,28 @@
+{
+  "name": "audio-raytracing-project",
+  "version": "0.0.0",
+  "description": "",
+  "license": "GPL-3.0",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/index.ts --sourcemap --bundle --outfile=public/index.js",
+    "build-watch": "esbuild src/index.ts --sourcemap --watch --bundle --outfile=public/index.js"
+  },
+  "devDependencies": {
+    "@types/mithril": "^2.2.7",
+    "@types/plotly.js": "^3.0.7",
+    "@types/three": "^0.182.0",
+    "@webgpu/types": "^0.1.65",
+    "esbuild": "^0.25.10",
+    "fft.js": "^4.0.4",
+    "mithril": "^2.3.8",
+    "plotly.js-dist": "^3.1.1",
+    "prettier": "^3.8.0",
+    "rhino3dm": "^8.17.0",
+    "three": "^0.182.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,7 @@
+# Note: Public files included so that GitHub pages works.
+#       Not ideal, but there we go.
+# public
+node_modules
+package-lock.json
+
+# *.js.map
