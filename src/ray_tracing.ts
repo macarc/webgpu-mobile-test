@@ -309,6 +309,11 @@ function specularRayIntersectionShaderCode(
       band_2000_and_4000[lowerIndex] = 0;
       band_2000_and_4000[upperIndex] = 0;
 
+      x_and_y[lowerIndex] = 12345;
+      x_and_y[upperIndex] = 54321;
+      z_and_ray_intensity[lowerIndex] = 111111;
+      z_and_ray_intensity[upperIndex] = 333333;
+
       // This should always be true - it should always intersect a triangle.
       if (closestTriangleIndex < triangleCount) {
         let triangle = triangleBuffer[closestTriangleIndex];
