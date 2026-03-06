@@ -22,8 +22,8 @@ let state = {
   receiverPosition: [3.0, 0.0, 0.0] as Vec3,
   receiverRadius: 0.2 as number | undefined,
   rayPlotCount: 10,
-  bouncePlotCount: 10,
-  throttle: 0,
+  bouncePlotCount: 2,
+  throttle: 0.8,
   geometry: new NoGeometry() as Geometry,
   bounceCoordinates: [] as Float32Array<ArrayBuffer>[],
   materials: [
