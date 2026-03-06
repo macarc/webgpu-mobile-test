@@ -394,6 +394,11 @@ function specularRayIntersectionShaderCode(
         x_and_y[upperIndex] = newposition.y;
         z_and_ray_intensity[lowerIndex] = newposition.z;
         z_and_ray_intensity[upperIndex] = 789;
+
+        x_and_y[lowerIndex] = 12345000;
+        x_and_y[upperIndex] = 543210000;
+        z_and_ray_intensity[lowerIndex] = 111111000;
+        z_and_ray_intensity[upperIndex] = 333333000;
       }
     }
 
