@@ -180,9 +180,9 @@ function specularRayIntersectionShaderCode(
   ) {
     let rayIndex = global_id.x;
     let u = 3340000 + rayIndex * ${bounceCount};
-    x_and_y[u] = 1.0;
 
-    return;
+    // THIS WORKS ??!
+    x_and_y[u] = 1.0;
 
     let triangleCount = i32(arrayLength(&triangleBuffer));
     let rayCount = u32(arrayLength(&rayBuffer));
