@@ -178,9 +178,6 @@ function specularRayIntersectionShaderCode(
     @builtin(global_invocation_id)
     global_id : vec3u,
   ) {
-    x_and_y[1] = 4770.0;
-    x_and_y[3340001] = 1.0;
-
     let rayIndex = global_id.x;
 
     let triangleCount = i32(arrayLength(&triangleBuffer));
@@ -222,6 +219,8 @@ function specularRayIntersectionShaderCode(
     for (var n: u32 = 0; n < ${bounceCount}; n++) {
       let lowerIndex = rayIndex * ${bounceCount} + n;
       let upperIndex = arrayLength(&distances) + lowerIndex;
+      x_and_y[lowerIndex] = 5880.0;
+      x_and_y[upperIndex] = 2.0;
 
       // TODO: infinity
       var rayTriangleDistance = 1e10;
@@ -393,15 +392,15 @@ function specularRayIntersectionShaderCode(
         intensity_2000 *= material.r2000;
         intensity_4000 *= material.r4000;
 
-        x_and_y[lowerIndex] = newposition.x;
-        x_and_y[upperIndex] = newposition.y;
-        z_and_ray_intensity[lowerIndex] = newposition.z;
-        z_and_ray_intensity[upperIndex] = 789;
+        // x_and_y[lowerIndex] = newposition.x;
+        // x_and_y[upperIndex] = newposition.y;
+        // z_and_ray_intensity[lowerIndex] = newposition.z;
+        // z_and_ray_intensity[upperIndex] = 789;
 
-        x_and_y[lowerIndex] = f32(lowerIndex);
-        x_and_y[upperIndex] = 54321000.0;
-        z_and_ray_intensity[lowerIndex] = f32(upperIndex);
-        z_and_ray_intensity[upperIndex] = 333333000.0;
+        // x_and_y[lowerIndex] = f32(lowerIndex);
+        // x_and_y[upperIndex] = 54321000.0;
+        // z_and_ray_intensity[lowerIndex] = f32(upperIndex);
+        // z_and_ray_intensity[upperIndex] = 333333000.0;
       }
     }
 
