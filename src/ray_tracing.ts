@@ -178,6 +178,10 @@ function specularRayIntersectionShaderCode(
     @builtin(global_invocation_id)
     global_id : vec3u,
   ) {
+    x_and_y[0] = 4770.0;
+    x_and_y[3340000] = 1.0;
+    return;
+
     let rayIndex = global_id.x;
 
     let triangleCount = i32(arrayLength(&triangleBuffer));
@@ -737,6 +741,7 @@ export async function rayTrace(
     let thisPassMaxValue = 0;
 
     console.log(result)
+    console.log(result[4][0], result[4][3340000], Array.from(result[4]).includes(1.0))
 
     for (let j = 0; j < result[0].length; ++j) {
       const index = Math.round(SAMPLE_RATE * (result[0][j] / SPEED_OF_SOUND));
