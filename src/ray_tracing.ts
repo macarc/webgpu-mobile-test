@@ -178,8 +178,8 @@ function specularRayIntersectionShaderCode(
     @builtin(global_invocation_id)
     global_id : vec3u,
   ) {
-    x_and_y[0] = 4770.0;
-    x_and_y[3340000] = 1.0;
+    x_and_y[1] = 4770.0;
+    x_and_y[3340001] = 1.0;
 
     let rayIndex = global_id.x;
 
