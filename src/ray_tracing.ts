@@ -736,6 +736,8 @@ export async function rayTrace(
     let thisPassAverageValue = 0;
     let thisPassMaxValue = 0;
 
+    console.log(result)
+
     for (let j = 0; j < result[0].length; ++j) {
       const index = Math.round(SAMPLE_RATE * (result[0][j] / SPEED_OF_SOUND));
       const air_absorption = Math.exp(-result[0][j] * AIR_ABSORPTION_COEFF);
