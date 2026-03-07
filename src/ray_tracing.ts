@@ -180,6 +180,7 @@ function specularRayIntersectionShaderCode(
   ) {
     let rayIndex = global_id.x;
     let u = u32(arrayLength(&distances)) + u32(rayIndex);
+    let v = u32(3340000) + u32(rayIndex);
 
     // THIS WORKS ??!
     x_and_y[rayIndex] = f32(arrayLength(&distances));
