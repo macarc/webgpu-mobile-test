@@ -183,7 +183,7 @@ function specularRayIntersectionShaderCode(
     let v: u32 = 3340000 + rayIndex * 2 + 1;
 
     // THIS WORKS ??!
-    x_and_y[rayIndex] = f32(arrayLength(&distances) == 3340000);
+    x_and_y[rayIndex] = f32(u+1 == v);
     x_and_y[u] = 1.0;
     x_and_y[v] = 2.0;
     return;
